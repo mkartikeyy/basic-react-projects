@@ -8,7 +8,8 @@ function useCurrInfo(currency){
     .then((res)=>{
         return res.json()
     })
-    .then(()=>{
+    .then((res)=>{
+        console.log(res[currency])
         return setData(res[currency])
     })
     },[currency])
